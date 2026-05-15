@@ -23,6 +23,11 @@ jobs:
 
     - run: npm install
 
+    - name: ডামি dist ফোল্ডার তৈরি করুন
+      run: |
+        mkdir -p dist
+        echo "<html><body></body></html>" > dist/index.html
+
     - run: npx cap add android
 
     - run: npx cap sync android
